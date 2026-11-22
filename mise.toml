@@ -1,0 +1,15 @@
+[tools]
+dotnet = "11"
+"npm:@usebruno/cli" = "4"
+
+[tasks.build]
+description = "Build with analyzers; warnings fail"
+run = "dotnet build"
+
+[tasks.dev]
+run = "dotnet run --project src/Booking.Api"
+
+[tasks.api-test]
+description = "Run the Bruno collection against the local API"
+dir = "spec/bruno/Booking API"
+run = "bru run"
